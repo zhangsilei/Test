@@ -4,18 +4,56 @@
 	<title>For my darling Bei</title>
 	<style type="text/css">
 		input{
+			width: 85px;
 			color: white;
 			background: #88DAE6;
-			border: 2px solid #597BEA;
+			border: none;
 			border-radius: 5px;
 			outline: none;
 			cursor: pointer;
 			font-weight: 900;
 			padding: 5px 5px;
+			display: block;
+			margin-bottom: 10px;
+			position: relative;
+		}
+		@-webkit-keyframes color1
+		{  
+			0% {background: #88DAE6;} 
+			50% {background: yellow;}
+			100% {background: #88DAE6;} 
+		}
+		@-webkit-keyframes color2
+		{  
+			0% {background: #88DAE6; left: 0px; top: 0px;} 
+			50% {background: blue;}   
+			100% {background: #88DAE6; left: 30px; top: 0px;} 
+		}
+		@-webkit-keyframes color3
+		{  
+			0% {background: #88DAE6; left: 0px; top: 0px;}   
+			50% {background: red;}
+			100% {background: #88DAE6; left: 60px; top: 0px;} 
+		}
+		@-webkit-keyframes color4
+		{  
+			0% {background: #88DAE6; left: 0px; top: 0px;} 
+			50% {background: grey;}
+			100% {background: #88DAE6; left: 90px; top: 0px;} 
+		}
+		@-webkit-keyframes color5
+		{  
+			0% {background: #88DAE6; left: 0px; top: 0px;}    
+			50% {background: green;}
+			100% {background: #88DAE6; left: 120px; top: 0px;} 
 		}
 	</style>
 </head>  
 <body>
-	<input type="button" value="点我试试看">
+	<input type="button" value="标签1" style="-webkit-animation: color1 4s;">
+	<input type="button" value="标签2" style="-webkit-animation: color2 4s; left:30px; top:0px">
+	<input type="button" value="标签3" style="-webkit-animation: color3 4s; left:60px; top:0px">
+	<input type="button" value="标签4" style="-webkit-animation: color4 4s; left:90px; top:0px">
+	<input type="button" value="标签5" style="-webkit-animation: color5 4s; left:120px; top:0px">
 </body>
 </html>
