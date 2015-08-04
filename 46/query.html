@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>99宿舍-全国大学英语四六级考试官方成绩查询网站</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		body{
+			position: absolute;
+		}
+		#container{
+			width: 970px;
+			margin-left: 25%;
+			position: relative;
+		}
+		.top{
+			margin-top: -5px;
+		}
+		.left{
+			
+		}
+		.content{
+			position: absolute;
+			top: 122px;
+			left: 210px;
+		}
+		.right{
+			position: absolute;
+			top: 120px;  
+			left: 730px;
+		}
+		.input1{
+			position: absolute;
+			left: 130px;
+			top: 30px;
+			width: 220px;
+		}
+		.input2{
+			position: absolute;
+			left: 130px;
+			top: 60px;
+			width: 220px;
+		}
+		.div{
+			position: absolute;
+			width: 507px;
+			height: 147px;
+			top: 387px;
+			left: 212px;  
+			border: 1px solid #E2E2E2;
+			border-top: none;
+		}
+		.zheng{
+			position: absolute;
+			top: 30px;
+			left: 50px;
+		}
+		.name{
+			position: absolute;
+			top: 60px;  
+			left: 66px;
+		}
+		.find{
+			position: absolute;
+			top: 33px;
+			left: 357px;
+			text-decoration: none;
+			font-size: 13px;
+		}
+		.btn{
+			cursor: pointer;
+			position: absolute;
+			top: 95px;
+			left: 132px;
+		}
+		.shuoming{
+			position: absolute;
+			top: 105px;
+			left: 220px;
+			text-decoration: none;
+			font-size: 13px;
+			color: #29867C;
+		}
+		.dayi{
+			position: absolute;
+			top: 105px;
+			left: 300px;
+			text-decoration: none;
+			font-size: 13px;
+			color: #29867C;
+		}
+	</style>
+	<script type="text/javascript">
+		function query(){
+			var number = document.getElementById("number").value;
+			var name = document.getElementById("name").value;
+			if(number != "340220151201901"){
+				alert("准考证号错误!");
+				return false;
+			}else if(name != "刘倩"){
+				alert("姓名输入错误!");
+				return false;
+			}else{
+				document.location.href = "result.html";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<img class="top" src="t.png">  
+		<img class="left" src="l.png">
+		<img class="content" src="c.png">
+		<img class="right" src="r.png">
+		<div class="div">
+			<span class="zheng"><b>准考证号：</b></span>
+			<span class="name"><b>姓&nbsp;名：</b></span>
+			<input id="number" class="input1" type="text" placeholder="请输入准考证号">
+			<a class="find" href="#">找回</a>
+			<input id="name" class="input2" type="text" placeholder="姓名的前两个字">
+			<img class="btn" src="btn.png" onclick="query()">
+			<span class="shuoming">填写说明</span>  
+			<span class="dayi">查分答疑</span>
+		</div>
+		<img src="b.png">
+	</div>
+</body>
+</html> 
