@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>使用CSS3实现导航条动画效果</title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		/* 导航按钮 */
+		#leader{    
+			list-style: none;
+			position: relative;
+		}
+		#leader li{
+			margin-top: 10px;
+			background: orange;
+			width: 70px;
+			height: 30px;
+			border-radius: 5px;
+			text-align: center;
+			line-height: 30px;
+			font-family: "Microsoft Yahei";
+			font-size: 14px;
+		}
+		#leader li:hover{
+			background: #000;
+			color: orange;
+			cursor: pointer;
+		}
+		/* 鼠标悬停提示 */
+		#home{
+			width: 0px;
+			height: 30px;
+			background: orange;
+			position: absolute;
+			left: 110px;
+			top: 0px;
+			border-radius: 20px;
+			text-align: center;
+			line-height: 30px;
+			font-family: "Microsoft Yahei";
+			font-size: 13px;  
+			transition: width 0.2s;
+		}
+		#about{
+			width: 0px;
+			height: 30px;
+			background: orange;
+			position: absolute;
+			top: 40px;
+			left: 110px;
+			border-radius: 20px;
+			font-family: "Microsoft Yahei";
+			font-size: 13px;
+			text-align: center;
+			line-height: 30px;
+			transition: width 0.2s;
+		}
+		#setting{
+			width: 0px;
+			height: 30px;
+			background: orange;
+			position: absolute;
+			left: 110px;
+			top: 80px;
+			border-radius: 20px;
+			font-family: "Microsoft Yahei";
+			text-align: center;
+			line-height: 30px;
+			font-size: 13px;
+			transition: width 0.2s;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var home = $("#home");
+			var about = $("#about");    
+			var setting = $("#setting");     
+			$("li:contains('Home')").hover(function(){   
+				home.css("width","60px");
+				setTimeout(function(){  
+					home.html("主页");
+				},200);
+			},function(){
+				home.html("");
+				home.css("width","0px");
+			})
+			$("li:contains('About')").hover(function(){
+				about.css("width","60px");
+				setTimeout(function(){
+					about.html("关于");  
+				},200);
+			},function(){
+				about.html("");
+				about.css("width","0px");
+			})
+			$("li:contains('Setting')").hover(function(){
+				setting.css("width","60px");
+				setTimeout(function(){
+					setting.html("设置");
+				},200)
+			},function(){
+				setting.html("");
+				setting.css("width","0px");
+			})
+		})
+	</script>
+</head>
+<body>
+	<ul id="leader">
+		<li>Home</li>
+		<div id="home"></div>
+		<li>About</li>
+		<div id="about"></div>
+		<li>Setting</li>
+		<div id="setting"></div>
+	</ul>
+</body>
+</html>
