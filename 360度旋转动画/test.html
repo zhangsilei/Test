@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>使用CSS3过渡和2D旋转实现动画旋转效果</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		#test{
+			width: 200px;
+			height: 200px;
+			background: url("head.jpg"); 
+			border-radius: 50%; 
+			transition: transform 2s;
+			-webkit-transition: transform 2s;     /* Chrome and Safari */
+			-o-transtion: transform 2s;     /* Opera */
+			-moz-transtion: transform 2s;     /* Firefox */
+			-ms-transition: transform 2s;     /* IE */
+		}
+		#test:hover{   
+			transform: rotate(360deg);     
+			-ms-transform: rotate(360deg);
+			-moz-transform: rotate(360deg);
+			-webkit-transform: rotate(360deg);
+			-o-transform: rotate(360deg);     
+		}
+	</style>     
+</head>     
+<body>     
+	<div id="test">   
+		
+	</div>
+</body>
+</html>
